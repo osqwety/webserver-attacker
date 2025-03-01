@@ -63,7 +63,7 @@ def attack(targ, router):
 subnet = get_network_cidr()
 nmapscan = f"nmap -p 80,443 {subnet} > result.txt"
 ans = subprocess.check_output(nmapscan, shell=True, text=True)
-print("Ran")
+#print("Ran")
 ips = find_hosts_with_open_ports("result.txt")
 print(ips)
 if len(ips) == 0:
